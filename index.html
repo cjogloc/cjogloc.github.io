@@ -82,19 +82,16 @@ window.targetGlobalSettings = {
 <body>
 
     
-	<div class="mboxDefault">
+	<div class="mboxDefault" id="mboxDefault">
   default content to replace by offer
 </div>
 <script>
 
 $( document ).ready(function() {
-  var el = document.currentScript.previousElementSibling;
+  var el = document.getElemebtById("mboxDefault");
   adobe.target.getOffer({
     mbox: "target-global-mbox",
-    params: {
-      param1: "value1",
-      param2: "value2"
-    },
+    
     success: function(offer) {
       adobe.target.applyOffer({
         mbox: "target-global-mbox",
