@@ -82,26 +82,29 @@ window.targetGlobalSettings = {
 <body>
 
     
-	<div class="mboxDefault" id="mboxDefault">
+	<div class="mboxDefault" >
   default content to replace by offer
+</div>
+<div id="offerBox">
+
 </div>
 <script>
 
-$( document ).ready(function() {
-  var el = document.getElementById("mboxDefault");
+$(document).ready(function() {
+  var el = 
   adobe.target.getOffer({
     mbox: "myBox",
     
     success: function(offer) {
       adobe.target.applyOffer({
         mbox: "myBox",
-        selector: el,
+        selector: "#offerBox",
         offer: offer
       });
     },
     error: function(error) {
       console.error(error);
-      el.style.visibility = "visible";
+      document.getElementById("offerBox").style.visibility = "visible";
     }
   });
   
