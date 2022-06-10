@@ -90,11 +90,11 @@ window.targetGlobalSettings = {
 $( document ).ready(function() {
   var el = document.getElementById("mboxDefault");
   adobe.target.getOffer({
-    mbox: "target-global-mbox",
+    mbox: "myBox",
     
     success: function(offer) {
       adobe.target.applyOffer({
-        mbox: "target-global-mbox",
+        mbox: "myBox",
         selector: el,
         offer: offer
       });
