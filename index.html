@@ -64,22 +64,7 @@ window.targetGlobalSettings = {
 };
 
 </script>
-	<script>
-	/*adobe.target.getOffer({
-  "mbox": "target-global-mbox",
-   
-  "success": function(offer) {
-        adobe.target.applyOffer( {
-           "mbox": "target-global-mbox",
-		   "selector" : "#offerBox",
-           "offer": offer
-        } );
-  },
-  "error": function(status, error) {
-      console.log('Error', status, error);
-  }
-});*/
-	</script>
+	
 	 <script>
             function targetPageParams(){
                 return ['page=' + document.location.pathname,
@@ -97,12 +82,25 @@ window.targetGlobalSettings = {
 <body>
 
     
-	<div class="mboxDefault">
+	<div class="offerBox">
         Default Content
     </div>
-    <script>
-        mboxCreate('homePageHero');
-    </script>
+   <script>
+	adobe.target.getOffer({
+  "mbox": "target-global-mbox",
+   
+  "success": function(offer) {
+        adobe.target.applyOffer( {
+           "mbox": "target-global-mbox",
+		   "selector" : "#offerBox",
+           "offer": offer
+        } );
+  },
+  "error": function(status, error) {
+      console.log('Error', status, error);
+  }
+});
+	</script>
 	
 
 	<!--<iframe src="default.html?model=G26D" width="100%" height="1200px" frameborder="0" scrolling="no"></iframe>-->
