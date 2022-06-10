@@ -86,6 +86,8 @@ window.targetGlobalSettings = {
   default content to replace by offer
 </div>
 <script>
+
+$( document ).ready(function() {
   var el = document.currentScript.previousElementSibling;
   adobe.target.getOffer({
     mbox: "target-global-mbox",
@@ -104,6 +106,8 @@ window.targetGlobalSettings = {
       console.error(error);
       el.style.visibility = "visible";
     }
+  });
+  
   });
 </script>
 	 
