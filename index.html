@@ -74,7 +74,7 @@ window.targetGlobalSettings = {
 	
 	<script>
 	adobe.target.getOffer({
-  "mbox": "#offerBox",
+  "mbox": "target-global-mbox",
   "params": {
      "a": 1,
      "b": 2,
@@ -83,7 +83,8 @@ window.targetGlobalSettings = {
   },
   "success": function(offer) {
         adobe.target.applyOffer( {
-           "mbox": "#offerBox",
+           "mbox": "target-global-mbox",
+		   "selector" : "#offerBox",
            "offer": offer
         } );
   },
