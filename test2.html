@@ -1,0 +1,87 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>BMW Request</title>
+    <!--Preconnect and DNS-Prefetch to improve page load time-->
+    <link rel="preconnect" href="//dtpartnersandbox.tt.omtrdc.net">
+    <link rel="dns-prefetch" href="//dtpartnersandbox.tt.omtrdc.net">
+    <!--/Preconnect and DNS-Prefetch-->
+    <!--Data Layer to enable rich data collection and targeting-->
+    <script>
+        var digitalData = {
+            "page": {
+                "pageInfo": {
+                    "pageName": "BMW Request"
+                }
+            }
+        };
+    </script>
+    <!--/Data Layer-->
+    <!-- targetPageParams(), targetPageParamsAll(), Data Providers or targetGlobalSettings() functions to enrich the visitor profile or modify the library settings-->
+     
+    <!--/targetPageParams()-->
+
+    <!--jQuery or other helper libraries should be implemented before at.js if you would like to use their methods in Target-->
+   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" referrerpolicy="no-referrer"></script>
+    <!--/jQuery-->
+    
+	<script>
+   //prehiding snippet for Adobe Target with asynchronous tags deployment
+   ;(function(win, doc, style, timeout) {
+   var STYLE_ID = 'at-body-style';
+   function getParent() {
+      return doc.getElementsByTagName('head')[0];
+   }
+   function addStyle(parent, id, def) {
+      if (!parent) {
+      return;
+      }
+      var style = doc.createElement('style');
+      style.id = id;
+      style.innerHTML = def;
+      parent.appendChild(style);
+   }
+   function removeStyle(parent, id) {
+      if (!parent) {
+      return;
+      }
+      var style = doc.getElementById(id);
+      if (!style) {
+      return;
+      }
+      parent.removeChild(style);
+   }
+   addStyle(getParent(), STYLE_ID, style);
+   setTimeout(function() {
+      removeStyle(getParent(), STYLE_ID);
+   }, timeout);
+   }(window, document, "body {opacity: 0 !important}", 3000));
+</script>
+<script>
+window.targetGlobalSettings = {  
+   cookieDomain: "cjogloc.github.io"
+};
+
+</script>
+	
+	 <script>
+            function targetPageParams(){
+                return ['page=' + document.location.pathname,
+                    'src=targetPageParams'];
+            }
+             
+            function targetPageParamsAll(){
+                return ['page=' + document.location.pathname,
+                    'src=targetPageParamsAll']
+            }
+        </script>
+ <script src="https://assets.adobedtm.com/a450827487d7/332af4d37411/launch-3b1133cf664a-development.min.js" async></script>
+</head>
+<body>
+<div class="mboxDefault" ><input type="text" placeholder="Test 2 input"></div>
+
+<div>.</div>
+
+</body>
+</html>
