@@ -64,9 +64,24 @@ window.targetGlobalSettings = {
 };
 
 </script>
-	
+	<script type="text/javascript">
+function targetPageParams() {
+
+	const urlParams = new URLSearchParams(window.location.search);
+const SKU = urlParams.get('SKU');
+	const cat = urlParams.get('cat');
+   return {
+      "entity": {
+         "id": SKU,
+         "categoryId":cat,
+         "value": 119.99,
+         "inventory": 329
+      }
+   }
+}
+</script>
 	 <script>
-            function targetPageParams(){
+        /*    function targetPageParams(){
                 return ['page=' + document.location.pathname,
                     'src=targetPageParams','entity.id=APMLWK3ZAA'];
             }
@@ -74,7 +89,7 @@ window.targetGlobalSettings = {
             function targetPageParamsAll(){
                 return ['page=' + document.location.pathname,
                     'src=targetPageParamsAll','entity.id=APMLWK3ZAA']
-            }
+            }*/
         </script>
      
     <script src="https://assets.adobedtm.com/a450827487d7/332af4d37411/launch-3b1133cf664a-development.min.js" async></script>
