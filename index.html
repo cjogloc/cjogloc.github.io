@@ -8,6 +8,23 @@
     <link rel="dns-prefetch" href="//dtpartnersandbox.tt.omtrdc.net">
     <!--/Preconnect and DNS-Prefetch-->
     <!--Data Layer to enable rich data collection and targeting-->
+
+	<script type="text/javascript">
+function targetPageParams() {
+
+	const urlParams = new URLSearchParams(window.location.search);
+const SKU = urlParams.get('SKU');
+	const cat = urlParams.get('cat');
+   return {
+      "entity": {
+         "id": SKU,
+         "categoryId":cat,
+         "value": 119.99,
+         "inventory": 329
+      }
+   }
+}
+</script>
     <script>
         var digitalData = {
             "page": {
@@ -64,22 +81,7 @@ window.targetGlobalSettings = {
 };
 
 </script>
-	<script type="text/javascript">
-function targetPageParams() {
-
-	const urlParams = new URLSearchParams(window.location.search);
-const SKU = urlParams.get('SKU');
-	const cat = urlParams.get('cat');
-   return {
-      "entity": {
-         "id": SKU,
-         "categoryId":cat,
-         "value": 119.99,
-         "inventory": 329
-      }
-   }
-}
-</script>
+	
 	 <script>
         /*    function targetPageParams(){
                 return ['page=' + document.location.pathname,
